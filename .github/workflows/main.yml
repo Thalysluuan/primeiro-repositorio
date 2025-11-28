@@ -22,6 +22,7 @@ jobs: #as tarefas que serão executadas de acordo com a ordem declarada
   segundo-job:
     name: "projeto em nodejs"
     runs-on: ubuntu-latest
+    needs: [primeiro-job]
     steps: 
       - name: "Verificação da versão atual do NODEJS"
         run: node --version
