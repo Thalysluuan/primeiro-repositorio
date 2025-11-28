@@ -1,0 +1,16 @@
+name: primeira-pipeline
+on: #qual evento vai acontecer 
+  push: #Push da branch em seguida especificar qual é a branch
+    branches: ["main"]
+  workflow_dispatch: #permite a execução da pipeline mannualmente
+jobs: #as tarefas que serão executadas de acordo com a ordem declarada
+  primeiro-job: 
+    name: "Meu Job" #todo job precisa ser especificado o nome
+    runs-on: ubuntu-latest # runs é o agente de execução
+    steps: #os passos de execução nele que adicionamos as ações que serão tomadas
+      - name: "Primeira ação"
+        run: echo "Hellow Word"
+      - name: "Segunda ação"
+        run: | 
+          echo: "Você criou seu primeiro Workflow"
+          echo: "Parabéns"
