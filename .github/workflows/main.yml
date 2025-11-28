@@ -12,10 +12,17 @@ jobs: #as tarefas que serão executadas de acordo com a ordem declarada
         run: echo "Hellow Word" #comando que vai executar "run"
       - name: "Segunda ação"
         run: |
-          echo "Você criou seu primeiro Workflow"
+          echo "Você criou seu primeiro Worflow"
           echo "Parabéns"
       - name: "Script python" 
         run: |
           variavel = "Meu teste em Python"
           print (variavel)
         shell: python #especificae a linguagem do terminal usada
+  segundo-job:
+    name: "projeto em nodejs"
+    runs-on: ubuntu-latest
+    steps: 
+      - name: "Verificação da versão atual do NODEJS"
+        run: node --version
+
