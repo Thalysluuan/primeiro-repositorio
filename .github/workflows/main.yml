@@ -26,7 +26,7 @@ jobs: #as tarefas que serão executadas de acordo com a ordem declarada
       - name: "Verificação da versão atual do NODEJS"
         run: node --version
       - name: "Definindo a versão do NODEJS"
-      - uses: actions/setup-node@v6
+        uses: actions/setup-node@v6
         with:
           node-version: 'v25.2.1'
       - name: "Verificação da versão atual do NODEJS"
