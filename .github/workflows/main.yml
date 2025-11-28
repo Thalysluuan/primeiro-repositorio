@@ -11,6 +11,6 @@ jobs: #as tarefas que serão executadas de acordo com a ordem declarada
       - name: "Primeira ação"
         run: echo "Hellow Word"
       - name: "Segunda ação"
-        run: | 
+        run: |
           echo: "Você criou seu primeiro Workflow"
           echo: "Parabéns"
